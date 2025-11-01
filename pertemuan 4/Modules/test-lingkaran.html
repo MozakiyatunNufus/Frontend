@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Modules</title>
+</head>
+
+<body>
+    <script type="module">
+        import { luasLingkaran, kelilingLingkaran } from './lingkaran.js';
+
+        let radius = prompt("Masukkan panjang radius lingkaran");
+        let luas = luasLingkaran(radius);
+        let keliling = kelilingLingkaran(radius);
+
+        alert('Luas : ${luas} | Keliling : ${keliling}');
+    </script>
+</body>
+
+</html>

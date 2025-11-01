@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Penjualan Komputer</title>
+    <link rel="stylesheet" href="style_tugas.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>APLIKASI PENJUALAN KOMPUTER</h2>
+
+        <div class="form-section">
+            <div class="form-group">
+                <label for="kategori">Kategori :</label>
+                <div class="input-with-btn">
+                    <select id="kategori">
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="pc">PC / Laptop</option>
+                        <option value="aksesoris">Aksesoris</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="tampilPopup('barang')">Pilih Barang</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Nama Barang :</label>
+                <input type="text" id="namaBarang" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Harga Satuan :</label>
+                <input type="number" id="hargaSatuan" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Jumlah :</label>
+                <input type="number" id="jumlah" min="1" value="1">
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Penjualan :</label>
+                <div class="input-with-btn">
+                    <input type="text" id="jenisPenjualan" readonly>
+                    <button class="btn btn-primary" onclick="tampilPopup('penjualan')">Pilih Jenis</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <div class="form-group">
+                    <label>Total Penjualan :</label>
+                    <input type="number" id="totalPenjualan" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Diskon :</label>
+                    <input type="number" id="diskon" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Pajak :</label>
+                    <input type="number" id="pajak" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Harga Total :</label>
+                    <input type="number" id="hargaTotal" readonly>
+                </div>
+                <button class="btn btn-success full" onclick="hitung()">Hitung Total</button>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h4>Ketentuan:</h4>
+            <ul>
+                <li>Diskon 10% dari total penjualan jika <b>tunai</b>.</li>
+                <li>Pajak: 15% untuk barang utama (PC/Laptop), 10% untuk aksesoris.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- POPUP BARANG -->
+    <div class="popup" id="popupBarang">
+        <div class="popup-content">
+            <h3>Pilih Barang</h3>
+            <div id="daftarBarang"></div>
+            <button class="btn btn-danger" onclick="tutupPopup('barang')">Batal</button>
+        </div>
+    </div>
+
+    <!-- POPUP PENJUALAN -->
+    <div class="popup" id="popupPenjualan">
+        <div class="popup-content">
+            <h3>Jenis Penjualan</h3>
+            <input type="radio" name="jenis" value="Tunai"> Tunai<br>
+            <input type="radio" name="jenis" value="Kredit"> Kredit<br><br>
+            <button class="btn btn-success" onclick="simpanJenis()">Simpan</button>
+            <button class="btn btn-danger" onclick="tutupPopup('penjualan')">Batal</button>
+        </div>
+    </div>
+
+    <script src="script_tugas.js"></script>
+</body>
+
+</html>

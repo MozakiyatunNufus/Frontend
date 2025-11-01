@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Biaya Kirim Paket</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f2fdf2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background: #ffffff;
+            border: 2px solid #00a651;
+            border-radius: 20px;
+            padding: 25px 35px;
+            width: 420px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #007a33;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            font-weight: bold;
+            color: #007a33;
+            background: #f5fff7;
+            border-radius: 10px;
+            text-align: right;
+            font-size: 16px;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #444;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>PERHITUNGAN BIAYA KIRIM PAKET</h2>
+
+        <label>Nomor Resi :</label>
+        <input type="text" id="resi" placeholder="Contoh: 001245">
+
+        <label>Berat Barang :</label>
+        <input type="number" id="berat" placeholder="Masukkan berat barang" step="0.1" min="0">
+
+        <label>Kota Asal :</label>
+        <select id="asal">
+            <option value="">-- Pilih Kota Asal --</option>
+            <option value="Banyuwangi">Banyuwangi</option>
+            <option value="Jember">Jember</option>
+            <option value="Probolinggo">Probolinggo</option>
+            <option value="Surabaya">Surabaya</option>
+        </select>
+
+        <label>Kota Tujuan :</label>
+        <select id="tujuan">
+            <option value="">-- Pilih Kota Tujuan --</option>
+            <option value="Banyuwangi">Banyuwangi</option>
+            <option value="Jember">Jember</option>
+            <option value="Probolinggo">Probolinggo</option>
+            <option value="Surabaya">Surabaya</option>
+        </select>
+
+        <div class="result" id="total">Total Biaya Pengiriman : Rp -</div>
+
+        <div class="note">
+            <b>Keterangan:</b><br>
+            - Biaya pengiriman dihitung otomatis berdasarkan berat barang dan jarak antar kota.<br>
+            - Kota: Banyuwangi, Jember, Probolinggo, Surabaya.
+        </div>
+    </div>
+
+    <script src="coba1.js"></script>
+
+</body>
+
+</html>
