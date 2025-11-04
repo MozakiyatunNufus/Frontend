@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Penjualan Computer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>APLIKASI PENJUALAN COMPUTER</h1>
+
+    <div class="container">
+        <h2>Data Barang</h2>
+        <div class="form-group">
+            <label>Kategori</label>
+            <select id="kategori">
+                <option value="">Pilih Kategori</option>
+                <option value="pc">PC / Laptop</option>
+                <option value="aksesoris">Aksesoris</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Nama Barang</label>
+            <input type="text" id="namaBarang" readonly />
+            <button class="btn-popup" onclick="openKategoriPopup()">Barang</button>
+        </div>
+
+        <div class="form-group">
+            <label>Harga Satuan</label>
+            <span>Rp.</span><input type="number" id="harga" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Jumlah</label>
+            <input type="number" id="jumlah" />
+        </div>
+        <div class="form-group">
+            <label>Jenis Penjualan</label>
+            <input type="text" id="jenisPenjualan" readonly />
+            <button class="btn-popup" onclick="openJenisPopup()">▼</button>
+        </div>
+
+        <div class="hasil">
+            <p>Total Penjualan : Rp. <span id="total">0</span></p>
+            <p>Diskon : Rp. <span id="diskon">0</span></p>
+            <p>Pajak : Rp. <span id="pajak">0</span></p>
+            <p class="total-final">Harga Total : Rp. <span id="totalAkhir">0</span></p>
+        </div>
+    </div>
+
+    <div class="ketentuan">
+        <h2>Ketentuan :</h2>
+        <ul>
+            <li>Diskon 10% jika pembayaran tunai</li>
+            <li>Pajak: 15% barang utama, 10% aksesoris</li>
+        </ul>
+    </div>
+
+    <!-- POPUP KATEGORI -->
+    <div id="popupKategori" class="popup">
+        <div class="popup-content">
+            <h3>Pilih Barang</h3>
+            <div id="listKategori"></div>
+            <button onclick="closePopup('popupKategori')">Batal</button>
+        </div>
+    </div>
+
+    <!-- POPUP JENIS PENJUALAN -->
+    <div id="popupJenis" class="popup">
+        <div class="popup-content">
+            <h3>Pilih Jenis Penjualan</h3>
+            <label><input type="radio" name="jenis" value="tunai" /> Tunai</label>
+            <label><input type="radio" name="jenis" value="kredit" /> Kredit</label>
+            <button onclick="simpanJenis()">Simpan</button>
+            <button onclick="closePopup('popupJenis')">Batal</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
