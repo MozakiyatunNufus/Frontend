@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Emas</title>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER MARKETPLACE -->
+    <header>
+        <div class="logo">emas<span> sinarjaya</span></div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Cari produk terbaik..">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-icons">
+            <div id="openCart" class="icon-btn">🛒</div>
+            <div class="icon-btn">❤️</div>
+        </div>
+    </header>
+
+    <!-- CATEGORY BAR -->
+    <nav class="category-bar">
+        <div>Perhiasan</div>
+        <div>Aksesoris</div>
+        <div>Emas Batangan</div>
+    </nav>
+
+    <!-- FILTER HARGA -->
+    <section class="filter-box">
+        <h3>Filter Harga</h3>
+        <div id="priceSlider"></div>
+        <p>Harga: <span id="priceLabel"></span></p>
+    </section>
+
+    <!-- PRODUK ALA SHOPEE -->
+    <section class="product-grid">
+
+        <div class="product-card" data-price="1.000.000">
+            <img src="images/cincin.jpg">
+            <h4>Cincin</h4>
+            <p class="price">Rp 1.000.000</p>
+            <p class="sold">2.15RB Terjual</p>
+            <button class="addToCart">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product-card" data-price="1.500.000">
+            <img src="images/gelang.jpg">
+            <h4>Gelang</h4>
+            <p class="price">Rp 1.500.000</p>
+            <p class="sold">3.55RB Terjual</p>
+            <button class="addToCart">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product-card" data-price="2.000.000">
+            <img src="images/kalung.jpg">
+            <h4>Kalung</h4>
+            <p class="price">Rp 2.000.000</p>
+            <p class="sold">9.18RB Terjual</p>
+            <button class="addToCart">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product-card" data-price="1.000.000">
+            <img src="images/Anting.jpg">
+            <h4>Anting</h4>
+            <p class="price">Rp 1.000.000</p>
+            <p class="sold">5.00RB Terjual</p>
+            <button class="addToCart">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product-card" data-price="1.500.000">
+            <img src="images/gelang kaki.webp">
+            <h4>Gelang Kaki</h4>
+            <p class="price">Rp 1.500.000</p>
+            <p class="sold">1.22RB Terjual</p>
+            <button class="addToCart">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product-card" data-price="800.000">
+            <img src="images/bros.jpg">
+            <h4>Bros</h4>
+            <p class="price">Rp 800.000</p>
+            <p class="sold">2.88RB Terjual</p>
+            <button class="addToCart">Tambah ke Keranjang</button>
+        </div>
+
+
+    </section>
+
+    <!-- DIALOG CART -->
+    <div id="cartDialog" title="Keranjang Belanja">
+        <ul id="cartItems"></ul>
+
+        <p>Total: Rp <span id="cartTotal">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

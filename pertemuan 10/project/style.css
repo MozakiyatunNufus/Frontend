@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+/* ==== HEADER ==== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #ff9f00;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #222;
+}
+
+.search-box {
+    display: flex;
+    width: 35%;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+/* ==== CATEGORY ==== */
+.category-bar {
+    display: flex;
+    gap: 30px;
+    padding: 14px 30px;
+    background: #fff7e0;
+    border-bottom: 1px solid #eee;
+    justify-content: center;
+}
+
+.category-bar div {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.category-bar div:hover {
+    background: #ffbf5b;
+    color: #fff;
+}
+
+/* ==== FILTER ==== */
+.filter-box {
+    padding: 25px 40px;
+    background: #fff3d4;
+    border-top: 1px solid #ffe3a7;
+}
+
+/* ==== PRODUCT ==== */
+.product-grid {
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .07);
+    border: 1px solid #eee;
+    text-align: center;
+    transition: .4s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .13);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin: 4px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #009a00;
+}
+
+.sold {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* BUTTON */
+.addToCart {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: #ffa600;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.addToCart:hover {
+    background: #ff8e00;
+}
